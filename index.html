@@ -1,0 +1,119 @@
+<!-- 
+RETRO-SPACE
+Copyright © 2017-2019 Mateusz Dera
+
+This file is part of RETRO-SPACE.
+
+RETRO-SPACE is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+RETRO-SPACE is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with RETRO-SPACE.  If not, see <http://www.gnu.org/licenses/>. 
+-->
+
+<!DOCTYPE html>
+<html>
+<header>
+	<title>
+		RETRO SPACE
+	</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="theme.css" type="text/css">
+
+	<meta charset="utf-8" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script>
+
+		var hash;
+
+		$(document).ready(function () {
+			$("a").on('click', function (event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					hash = this.hash;
+					$('html, body').animate({
+						scrollLeft: $(hash).offset().left
+					}, 800, function () {
+						window.location.hash = hash;
+					});
+				}
+			});
+
+			$(window).resize(function () {
+				{
+					event.preventDefault();
+
+					$('html, body').animate({
+						scrollLeft: $(hash).offset().left
+					}, 0, function () {
+						window.location.hash = hash;
+					});
+				}
+			});
+
+		});
+
+	</script>
+
+</header>
+
+<audio src="assets/music/Chiptune_Does_Dubstep.mp3" autoplay loop="true" id="audio">
+</audio>
+
+<body onload="loop();">
+
+
+	<div id="page">
+		<div class="null">
+		</div>
+		<div class="null">
+		</div>
+		<div class="game" id="game">
+			<div id="buttons">
+				<font color="#abdf32"><i class="fas fa-search-plus"></i></font> <button class="plus" onclick="plus()"> + </button>
+				<button class="minus" onclick="minus()"> - </button>&nbsp;&nbsp;&nbsp;
+				<i id="mdd">
+					<font color="#abdf32"><i class="fa fa-music" aria-hidden="true"></i></font> <button onclick="musicchange()" class="m_on">On</button>
+				</i>&nbsp;&nbsp;&nbsp;
+				<i id="sdd">
+					<font color="#abdf32"><i class="fa fa-volume-up" aria-hidden="true"></i></font> <button onclick="soundchange()"
+					 class="m_on">On</button>
+				</i>
+			</div>
+			<div id="info"></div>
+			<div id="0"></div>
+			<div id="1"></div>
+			<div id="2"></div>
+			<div id="3"></div>
+			<div id="4"></div>
+			<div id="5"></div>
+			<div id="6"></div>
+			<div id="7"></div>
+			<div id="8"></div>
+			<div id="9"></div>
+			<div id="10"></div>
+			<div id="11"></div>
+			<div id="12"></div>
+			<div id="13"></div>
+			<div id="14"></div>
+			<div id="15"></div>
+			<div id="16"></div>
+			<div id="17"></div>
+		</div>
+
+</body>
+
+<script type="text/javascript" src="main.js"></script>
+
+</html>

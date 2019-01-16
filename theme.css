@@ -1,0 +1,145 @@
+	/* 
+	RETRO-SPACE
+	Copyright © 2017-2019 Mateusz Dera
+
+	This file is part of RETRO-SPACE.
+
+	RETRO-SPACE is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 3 of the License, or
+	(at your option) any later version.
+
+	RETRO-SPACE is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with RETRO-SPACE.  If not, see <http://www.gnu.org/licenses/>.  
+	*/
+
+	@font-face {
+		font-family: PressStart2P;
+		src: url(assets/font/PressStart2P-Regular.ttf);
+	}
+	
+	::selection {
+		background: #dd0070;
+	}
+		
+	::-webkit-scrollbar
+	{
+	  width: 15px;  
+	  height: 15px; 
+	}
+
+	::-webkit-scrollbar-track
+	{
+		background: #52e3f6;
+	}
+
+	::-webkit-scrollbar-thumb
+	{
+		background: #abdf32;
+	}
+			
+	body{
+		font-family: 'PressStart2P', sans-serif;
+		margin: 0px;
+		color: #ffffff;
+		
+		background-repeat: no-repeat;
+		image-rendering: optimizeSpeed;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -o-crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: pixelated;
+		image-rendering: optimize-contrast;
+		-ms-interpolation-mode: nearest-neighbor;
+
+		background-color: #1d1d1d;
+		background-image: url("assets/images/main_background.png");
+		background-repeat: repeat;
+	}
+	
+	.game{
+		max-width: 985px;
+		margin: 0px auto;
+		user-select: none;
+		text-align: center;
+		line-height: 22px;
+		background-image: url("assets/images/background.png");
+	}
+			
+	#info{
+		padding-top: 4px;
+		text-align: center;
+	}
+			
+	table{
+		text-align:center;
+		width:100%;
+		height: 105px;
+	}
+			
+	tr{
+		margin: 0px auto;
+		height: 100%;
+		vertical-align: middle;
+	}
+			
+	td{
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+	input{
+		border: 0px solid;
+		outline: none;
+	}
+			
+	button{
+		border: 0px solid;
+		background: #000000;
+		outline: none;
+	}
+			
+	.plus{
+		color: #dd0070;
+		text-align: center;
+	}
+			
+	.plus:hover{
+		color: #52e3f6;
+		background: #dd0070;
+	}
+			
+	.m_on{
+		font-size: 1em;
+		color: #dd0070;
+	}
+			
+	.m_on:hover{
+		color: #52e3f6;
+		background: #dd0070;
+	}		
+		
+	.m_off{
+		font-size: 1em;
+		color: #52e3f6;
+	}
+			
+	.m_off:hover{
+		color: #dd0070;
+		background: #52e3f6;
+	}
+		
+	.minus{
+		color: #52e3f6;
+		text-align: center;
+	}
+			
+	.minus:hover{
+		color: #dd0070;
+		background: #52e3f6;
+	}
